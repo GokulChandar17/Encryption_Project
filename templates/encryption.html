@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption</title>
+    <link rel="stylesheet" href=""{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Encryption</h1>
+        <div class="form-group">
+            <label for="encryption-technique">Select Encryption Technique:</label>
+            <select id="encryption-technique">
+                <option value="rsa">RSA</option>
+                <option value="aes">AES</option>
+                <option value="des">DES</option>
+                <option value="sha256">SHA-256</option>
+                <option value="sha512">SHA-512</option>
+                <option value="md5">MD5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="plaintext">Enter Plaintext:</label>
+            <input type="text" id="plaintext">
+        </div>
+        <button onclick="encrypt()">Encrypt</button>
+        <a href=""{{ url_for('static', filename='index.html') }}" class="back-button">Back</a>
+        <div id="ciphertext-container"></div>
+    </div>
+
+    <script src=""{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
